@@ -13,6 +13,7 @@ const Player = ({currentSong}) => {
     //Event Handlers
     const playSongHandler = () => {
         console.log(audioRef.current)
+        audioRef.current.play();
     }
 
     return (
