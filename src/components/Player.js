@@ -48,7 +48,7 @@ const Player = ({
                 audioRef.current.play();
               })
               .catch((error) => console.log(error));
-          }
+            }
         }
     };
 
