@@ -10,7 +10,7 @@ import Library from './components/Library';
 import Nav from './components/Nav'
 
 // Util
-import data from './util'
+import data from './data'
 
 
 
