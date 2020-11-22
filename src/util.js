@@ -9,7 +9,7 @@ function chillHop() {
             audio: "https://mp3.chillhop.com/serve.php/?mp3=10454",
             color: [],
             id: uuidv4(),
-            active: false,
+            active: true,
         },
         {
             name: "Butterfly",
@@ -28,7 +28,7 @@ function chillHop() {
             audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
             color: ["#205950", "#2ab3bf"],
             id: uuidv4(),
-            active: true,
+            active: false,
         },
         {
             name: "Daylight",
