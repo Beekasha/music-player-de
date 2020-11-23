@@ -97,9 +97,6 @@ const Player = ({
         setSongInfo({...songInfo, currentTime: e.target.value});
     }
 
-    // const skipTrackHandler = (direction) => {
-        
-    // }
 
     const skipTrackHandler = async (direction) => {
         let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
@@ -122,6 +119,11 @@ const Player = ({
         if (isPlaying) audioRef.current.play();
     };
 
+    //Add the styles
+    const trackAnim = {
+        transform: `translateX(${songInfo.animationPercentage}%)`
+    }
+
     return (
         <div className="player">
             <div className="time-control">
@@ -134,7 +136,7 @@ const Player = ({
                         type="range" 
                         onChange={dragHandler}
                     />
-                    <div className="animate-track"></div>
+                    <div style={trackAnim} className="animate-track"></div>
                 </div>
                 <p>{songInfo.duration ? getTime(songInfo.duration) : '0:00'}</p>
             </div>
