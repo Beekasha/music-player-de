@@ -24,3 +24,17 @@
         
     }
 }
+
+// Image spinning animation
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.rotateSong {
+    animation: rotate 30s linear forwards infinite;
+}

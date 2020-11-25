@@ -9,7 +9,6 @@ import Song from './components/Song';
 import Library from './components/Library';
 import Nav from './components/Nav'
 
-// Util
 import data from './data'
 import {playAudio} from './helpers'
 
@@ -58,7 +57,7 @@ function App() {
   return (
     <div className={`App ${libraryStatus ? "library-active" : ""}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
-      <Song currentSong={currentSong} />
+      <Song currentSong={currentSong} isPlaying={isPlaying}/>
       <Player 
         audioRef={audioRef} 
         setIsPlaying={setIsPlaying}

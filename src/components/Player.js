@@ -9,8 +9,6 @@ import {
 
 import { playAudio } from "../helpers"
 
-
-
 const Player = ({
     currentSong, 
     isPlaying, 
@@ -38,7 +36,6 @@ const Player = ({
         };
       }
     });
-
     setSongs(newSongs);
   };
 
@@ -68,7 +65,6 @@ const Player = ({
     };
 
     const dragHandler = (e) => {
-        console.log(e.target.value)
         audioRef.current.currentTime = e.target.value;
         setSongInfo({...songInfo, currentTime: e.target.value});
     }
@@ -92,7 +88,7 @@ const Player = ({
           activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
         }
         if (isPlaying) audioRef.current.play();
-      };
+    };
 
     //Add the styles
     const trackAnim = {
@@ -133,10 +129,8 @@ const Player = ({
                     icon={faAngleRight} 
                     size="2x" 
                     onClick={() => skipTrackHandler('skip-forward')}
-
                 />
             </div>
-
         </div>
     )
 }
