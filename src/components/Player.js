@@ -23,22 +23,24 @@ const Player = ({
     setSongs,
 }) => {
 
-    const activeLibraryHandler = (nextPrev) => {
-        const newSongs = songs.map((song) => {
-            if(song.id === currentSong.id) {
-                return{
-                    ...song,
-                    active: true,
-                };
-            }else {
-                return{
-                    ...song,
-                    active: false,
-                };
-            }
-        });
-        setSongs(newSongs);
-    }
+  const activeLibraryHandler = (nextPrev) => {
+    console.log("hitting activeLibraryHandler")
+    const newSongs = songs.map((song) => {
+      if (song.id === nextPrev.id) {
+        return {
+          ...song,
+          active: true,
+        };
+      } else {
+        return {
+          ...song,
+          active: false,
+        };
+      }
+    });
+
+    setSongs(newSongs);
+  };
 
 
     //UseEffect will
@@ -71,7 +73,6 @@ const Player = ({
         setSongInfo({...songInfo, currentTime: e.target.value});
     }
 
-
     const skipTrackHandler = async (direction) => {
         let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
     
@@ -91,7 +92,7 @@ const Player = ({
           activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
         }
         if (isPlaying) audioRef.current.play();
-    };
+      };
 
     //Add the styles
     const trackAnim = {
