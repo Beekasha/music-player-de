@@ -7,7 +7,7 @@ function chillHop() {
             cover: "https://chillhop.com/wp-content/uploads/2020/10/23fdd99adc3e16abcb67b004ea3e748ebf433a49-1024x1024.jpg",
             artist: "Aviino",
             audio: "https://mp3.chillhop.com/serve.php/?mp3=10454",
-            color: [],
+            color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: true,
         },

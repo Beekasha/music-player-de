@@ -7,6 +7,8 @@ import {
     faPause,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { playAudio } from "../helpers"
+
 
 
 const Player = ({
@@ -38,18 +40,6 @@ const Player = ({
         setSongs(newSongs);
     }
 
-    const playAudio = (isPlaying, audioRef) => {
-        if (isPlaying) {
-          const playPromise = audioRef.current.play();
-          if (playPromise !== undefined) {
-            playPromise
-              .then((audio) => {
-                audioRef.current.play();
-              })
-              .catch((error) => console.log(error));
-            }
-        }
-    };
 
     //UseEffect will
     // useEffect(() => {
